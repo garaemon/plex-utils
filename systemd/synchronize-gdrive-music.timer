@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for synchronize-gdrive-music.service
+
+[Timer]
+# Every 15 minutes
+OnCalendar=*:0/15
+Persistent=true
+
+[Install]
+WantedBy=timers.target

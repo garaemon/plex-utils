@@ -1,0 +1,13 @@
+[Unit]
+Description=Synchronize google drive directory to local
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/ryohei/gprog/plex-utils/scripts/synchronize-google-drive.sh
+User=ryohei
+LimitNOFILE=1006500
+LimitNPROC=1006500
+
+[Install]
+WantedBy=timers.target
