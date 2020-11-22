@@ -15,7 +15,7 @@ def main(from_directory, to_directory):
                 if 'album' not in tags:
                     print('{} does not have album'.format(from_path))
                     continue
-                album = tags['album']
+                album = str(tags['album'])
                 to_directory = os.path.join(to_directory, album)
                 to_path = os.path.join(to_directory, f)
                 if not os.path.exists(to_directory):
