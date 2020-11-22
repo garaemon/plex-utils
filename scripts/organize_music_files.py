@@ -16,15 +16,14 @@ def main(from_directory, to_directory):
                     print('{} does not have album'.format(from_path))
                     continue
                 album = tags['album'][0]
-                print(album)
-                # to_directory = os.path.join(to_directory, album)
-                # to_path = os.path.join(to_directory, f)
-                # if not os.path.exists(to_directory):
-                #     print('Creating Album directory'.format(to_directory))
-                #     os.makedirs(to_directory)
-                # if not os.path.exists(to_path):
-                #     print('Copying {} to {}'.format(from_path, to_path))
-                #     shutil.copy(from_path, to_path)
+                to_directory = os.path.join(to_directory, album)
+                to_path = os.path.join(to_directory, f)
+                if not os.path.exists(to_directory):
+                    print('Creating Album directory'.format(to_directory))
+                    os.makedirs(to_directory)
+                if not os.path.exists(to_path):
+                    print('Copying {} to {}'.format(from_path, to_path))
+                    shutil.copy(from_path, to_path)
 
 
 if __name__ == "__main__":
